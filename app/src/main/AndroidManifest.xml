@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.srcbox.file">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" /> <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <application
+        android:name=".application.EggApplication"
+        android:icon="@mipmap/mountain"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="30">
+        <activity android:name=".ui.userinfo.UserInfoActivity" />
+        <activity android:name=".ui.util.similarsites.SimilarSitesActivity"/>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="101897261" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".ui.searchimginfo.SearchImgInfoActivity" />
+        <activity android:name=".ui.util.ResourceExtractActivity" />
+        <activity android:name=".ui.util.LockScreenActivity" />
+        <activity android:name=".ui.DiyFileTemplateActivity" />
+        <activity android:name="com.donkingliang.imageselector.ImageSelectorActivity" />
+        <activity
+            android:name="com.donkingliang.imageselector.PreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.donkingliang.imageselector.ClipImageActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.PlayVideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".ui.util.cartoonFormPicture.CartoonFormPictureActivity" />
+        <activity android:name=".ui.PointFileExtract">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.apps.activity.AppsActivity" />
+        <activity android:name=".ui.GetMemberActivity" />
+        <activity android:name=".ui.util.GetWebResource" />
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:theme="@style/AppWelcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.AppFunActivity" />
+        <activity android:name=".ui.SettingActivity" />
+        <activity android:name=".ui.AboutActivity" />
+        <activity android:name=".ui.AppList" />
+        <activity android:name=".ui.ExtractManager" />
+        <activity android:name=".ui.ImageSelectActivity" />
+        <activity android:name=".ui.util.WallPaper" />
+        <activity android:name=".ui.util.ShitSmooth" />
+        <activity android:name=".ui.ErrorCrash" />
+        <activity android:name=".ui.ShadeActivity" />
+        <activity android:name=".ui.util.CanSpeak" />
+        <activity android:name=".ui.util.Bv2AvActivity" />
+        <activity android:name=".ui.extractManager.activity.ExtractManagerActivity" />
+        <activity android:name=".ui.util.MusicDownloadActivity" />
+        <activity android:name=".ui.util.HexToBinaryActivity" />
+        <activity android:name=".ui.util.FindWordActivity"/>
+
+        <service
+            android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+            android:label="dexopt"
+            android:process=":dexopt" />
+        <service
+            android:name=".ui.screen.ScreenServices"
+            android:foregroundServiceType="mediaProjection" />
+        <service
+            android:name=".ui.screen.ScreenAccessibility"
+            android:label="山盒2.0——屏幕资源抓取"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+        <service android:name=".service.ShadeService" />
+        <service
+            android:name=".util.ScreenCaptureUtil"
+            android:enabled="true"
+            android:foregroundServiceType="mediaProjection"
+            tools:targetApi="q" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.srcbox.file.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 元数据 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+    </application>
+
+</manifest>

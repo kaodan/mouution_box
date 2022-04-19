@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backButton="false"
+        app:title="BV转AV" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/bv_edit"
+        android:layout_width="match_parent"
+        android:maxLines="1"
+        android:lines="1"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="输入BV号或AV号"
+        android:textSize="15sp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="输入BV号"
+        app:met_floatingLabelTextColor="@color/colorStress"
+        app:met_primaryColor="@color/colorStress" />
+
+    <TextView
+        android:textIsSelectable="true"
+        android:visibility="gone"
+        android:id="@+id/result_av_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <www.linwg.org.lib.LCardView
+        android:layout_marginBottom="15dp"
+        android:id="@+id/bv2av_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/colorStress"
+        app:cornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/bv2av_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转换"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </www.linwg.org.lib.LCardView>
+</LinearLayout>

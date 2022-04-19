@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    configurations {
+        all {
+            exclude module: 'httpclient'
+            exclude module: 'commons-logging'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+    useLibrary 'org.apache.http.legacy'
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId "com.srcbox.file"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 22032100
+        versionName "2.9.999"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    /*  sourceSets {
+          main{
+              res.srcDirs = [
+                      'src/main/res/template_dialog',
+                      'src/main/res/layout',
+                      'src/main/res'
+              ]
+          }
+      }*/
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    implementation files('libs/open_sdk_3.5.2.152_r9e04b1c_lite.jar')
+
+    implementation files('libs\\m3u8download.jar')
+    implementation(name: 'alipaySdk-15.7.5', ext: 'aar')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleDependency
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'org.linwg1988:lcardview:1.5.2'
+    implementation 'cat.ereza:customactivityoncrash:2.2.0'
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.race604.waveloading:library:1.1.1'
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    implementation "com.squareup.okhttp3:okhttp:4.8.0"
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+
+    implementation 'com.hjq:titlebar:6.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.lxj:xpopup:2.0.6-rc3'
+    implementation 'com.alibaba:fastjson:1.2.68'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.github.arcadefire:nice-spinner:1.4.5'
+    implementation 'com.hjq:xxpermissions:9.8'
+//    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    implementation 'cn.leancloud:storage-android:6.5.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+//    implementation 'com.github.yhaolpz:FloatWindow:1.0.9'
+    implementation 'com.tencent.tbs.tbssdk:sdk:43903'
+    implementation 'de.ruedigermoeller:fst:2.56'
+
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    kapt 'com.arialyy.aria:compiler:3.8.6'
+    implementation 'com.arialyy.aria:core:3.8.6'
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+    implementation 'com.liulishuo.filedownloader:library:1.7.7'
+    implementation 'org.jsoup:jsoup:1.13.1'
+    implementation 'me.shouheng.compressor:compressor:1.3.1'
+/*
+    debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:3.1.2'
+    releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:3.1.2'*/
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.4'
+//    implementation project(':vpnadaptercore')
+    implementation "com.qmuiteam:arch:2.0.0-alpha10"
+    implementation 'com.qmuiteam:qmui:2.0.0-alpha10'
+    kapt "com.qmuiteam:arch-compiler:2.0.0-alpha10"
+    implementation 'me.rosuh:AndroidFilePicker:0.6.4'
+//    implementation 'com.yinglan.shadowimageview:shadowimageview:1.0.4'
+    implementation 'com.github.donkingliang:ImageSelector:2.2.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    implementation 'org.zeroturnaround:zt-zip:1.14'
+    implementation 'com.konghq:unirest-java:3.5.00'
+
+
+//    implementation 'ws.schild:jave-all-deps:2.6.0'
+//    implementation 'com.coder.command:ffmpeg-mini:1.1.6'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

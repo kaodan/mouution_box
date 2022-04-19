@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--
+                        <www.linwg.org.lib.LCardView
+                            app:leftTopCornerRadius="25dp"
+                            app:rightTopCornerRadius="25dp"
+                            app:cardBackgroundColor="#ffffff"
+                            app:shadowSize="10dp"
+                            app:shadowColor="@color/colorWhiteShadow"
+                            app:shadowStartAlpha="100"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/colorStress"
+                                android:padding="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="左边" />
+                        </www.linwg.org.lib.LCardView>-->
+
+            <!--   <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="25dp"
+                   android:layout_marginTop="25dp"
+                   android:text="选择资源类型"
+                   android:textColor="@color/colorGray" />
+
+               <org.angmarch.views.NiceSpinner
+                   android:id="@+id/nice_spinner_ext_type"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="16dp"
+                   app:popupTextAlignment="start" />
+   -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:text="选择提取类型"
+                android:textColor="@color/colorGray" />
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/nice_spinner_src_file_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:popupTextAlignment="start" />
+            <!--
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="25dp"
+                            android:text="选择提取名字类型"
+                            android:textColor="@color/colorGray" />
+
+                        <org.angmarch.views.NiceSpinner
+                            android:id="@+id/nice_spinner_name_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:popupTextAlignment="start" />-->
+
+
+            <TextView
+                android:id="@+id/extract_out_dir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:text="路径"
+                android:textColor="@color/colorGray" />
+
+
+            <LinearLayout
+                android:id="@+id/extract_app_src"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/extract_app_src_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:padding="15dp"
+                    android:text="提取资源"
+                    android:textColor="@color/colorStress" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/statusSplitView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rightSize="16sp"
+        app:rightTitle="&#xe76b;"
+        app:title="付费音乐下载" />
+
+    <www.linwg.org.lib.LCardView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:cardBackgroundColor="@color/white"
+        app:cornerRadius="5dp">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="10dp">
+
+            <EditText
+                android:id="@+id/key_word"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="歌手 歌名"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/music_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="&#xe626;"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </www.linwg.org.lib.LCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/music_download_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

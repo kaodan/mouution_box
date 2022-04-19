@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_fun_recycler_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:id="@+id/tagUtil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:text="@string/t4"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/tagSize"
+            tools:ignore="SpUsage" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_util_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+
+
+    <!--
+            <www.linwg.org.lib.LCardView
+                android:id="@+id/screen_gather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                app:cardBackgroundColor="@color/colorStress"
+                app:cornerRadius="6dp"
+                app:shadowColor="@color/colorStress"
+                app:shadowSize="5dp"
+                app:shadowStartAlpha="100">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/t5"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+
+            </www.linwg.org.lib.LCardView>
+
+            <www.linwg.org.lib.LCardView
+                android:id="@+id/web_resource_get_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                app:cardBackgroundColor="@color/colorStress"
+                app:cornerRadius="6dp"
+                app:shadowColor="@color/colorStress"
+                app:shadowSize="5dp"
+                app:shadowStartAlpha="100">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="网页资源抓捕"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+
+            </www.linwg.org.lib.LCardView>-->

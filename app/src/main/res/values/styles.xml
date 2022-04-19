@@ -1,0 +1,14 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorStress</item>
+        <item name="colorPrimaryDark">@color/colorStressDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorControlHighlight">#222196f3</item>
+        <!--        <item name="android:windowBackground">@mipmap/box_bg</item>-->
+    </style>
+
+    <style name="AppWelcome" parent="android:Theme.Translucent.NoTitleBar.Fullscreen" />
+</resources>

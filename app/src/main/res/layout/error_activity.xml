@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#333333"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/customactivityoncrash_error_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="好像出现错误了呢"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/error_copy_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#333333"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:text="查看错误信息" />
+
+    <Button
+        android:id="@+id/errorJiaQun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#333333"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:text="加群寻求帮助" />
+
+    <Button
+        android:id="@+id/error_repair_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#333333"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:text="自动修复（可解决80%的情况）" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        />
+</LinearLayout>

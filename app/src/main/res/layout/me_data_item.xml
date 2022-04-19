@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <www.linwg.org.lib.LCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shadowSize="5dp"
+        app:shadowColor="@color/colorWhiteShadow"
+        app:cornerRadius="10dp"
+        app:shadowStartAlpha="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:textColor="#2196f3"
+                android:id="@+id/number_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11"
+                android:textSize="30sp" />
+
+            <TextView
+                android:textColor="@color/colorGray"
+                android:id="@+id/measure_word_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个" />
+        </LinearLayout>
+    </www.linwg.org.lib.LCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <root-path
+        name="root"
+        path="" />
+    <external-path
+        name="external_files"
+        path="path" />
+    <files-path
+        name="files"
+        path="apk" />
+    <external-files-path
+        name="name"
+        path="file" />
+    <cache-path
+        name="name"
+        path="path" />
+    <external-path
+        name="office"
+        path="." />
+</paths>

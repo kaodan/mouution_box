@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="网站源码打包"
+        android:textColor="#222222"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/link_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="@string/theme_tag"
+        android:hint="输入链接"
+        android:lines="1"
+        android:text="http://"
+        app:met_autoValidate="true"
+        app:met_baseColor="@color/colorFont"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="输入链接"
+        app:met_maxCharacters="300"
+        app:met_primaryColor="@color/colorFont"
+        app:met_underlineColor="@color/colorFont"
+        tools:ignore="ContentDescription" />
+
+    <www.linwg.org.lib.LCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        app:cornerRadius="8dp">
+
+        <Button
+            android:id="@+id/to_yes_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="打包"
+            android:textColor="@color/colorStress" />
+    </www.linwg.org.lib.LCardView>
+
+</LinearLayout>

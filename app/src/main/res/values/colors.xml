@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="colorPrimary">@color/colorStress</color>
+<color name="colorStressDark">#ffffff</color>
+<color name="colorAccent">#03DAC5</color>
+<color name="colorGray">#cccccc</color>
+<color name="colorWhiteShadow">#EFEFEF</color>
+<color name="colorStress">#2196f3</color>
+<color name="colorHalfStress">#2196f3</color>
+<color name="colorFont">#607D8B</color>
+<color name="white">#ffffff</color>
+<color name="bgaGrey">#F4F4F4</color>
+<color name="tranBgaGrey">#55F4F4F4</color>
+<color name="textGrey">#CCCCCC</color>
+<color name="textColor">#000000</color>
+<color name="transparent">#00000000</color>
+</resources>

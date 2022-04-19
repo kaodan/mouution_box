@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/picture_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <!--  <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="25dp"
+          android:text="@string/t6"
+          android:textColor="@color/colorGray"
+          android:textSize="@dimen/tagSize"
+          tools:ignore="SpUsage" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/lately_recycler_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:overScrollMode="never" />-->
+
+    <!-- <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="25dp"
+         android:text="@string/t8"
+         android:textColor="@color/colorGray"
+         android:textSize="@dimen/tagSize"
+         tools:ignore="SpUsage" />
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/video_recycler_view"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:overScrollMode="never" />
+
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="25dp"
+         android:text="@string/t9"
+         android:textColor="@color/colorGray"
+         android:textSize="@dimen/tagSize"
+         tools:ignore="SpUsage" />
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/music_recycler_view"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:overScrollMode="never" />-->
+
+
+    <!--
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tag_lately"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@string/t6"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/tagSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lately_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/tag_lately" />
+
+    <TextView
+        android:id="@+id/tag_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@string/t7"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/tagSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lately_recycler_view"
+        tools:ignore="SpUsage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/picture_Recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/tag_picture" />
+
+    <TextView
+        android:id="@+id/tag_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@string/t8"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/tagSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/picture_Recycler_view"
+        tools:ignore="SpUsage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/video_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/tag_video" />
+
+    <TextView
+        android:id="@+id/tag_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@string/t9"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/tagSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/video_recycler_view"
+        tools:ignore="SpUsage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_recycler_view"
+        android:layout_margin="25dp"
+        android:overScrollMode="never"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tag_music" />
+    </androidx.constraintlayout.widget.ConstraintLayout>-->

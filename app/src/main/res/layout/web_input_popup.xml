@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="存储路径"
+            android:textColor="#222222"
+            android:textSize="@dimen/tagSize"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/web_out_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:text="文件保存在：" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="说明"
+            android:textColor="#222222"
+            android:textSize="@dimen/tagSize"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:text="文件会自动下载哦，右上角查看下载数量" />
+
+        <www.linwg.org.lib.LCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:padding="5dp"
+            app:cornerRadius="8dp"
+            app:shadowColor="#444444"
+            app:shadowSize="0sp"
+            app:shadowStartAlpha="100">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <!--<com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="60"
+                    app:counterTextColor="@color/colorStress"
+                    app:hintTextColor="@color/colorGray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:hint="输入链接"
+                        android:padding="15dp"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>-->
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/link_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/theme_tag"
+                    android:hint="输入链接"
+                    android:lines="1"
+                    app:met_autoValidate="true"
+                    app:met_baseColor="@color/colorFont"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="输入链接"
+                    app:met_maxCharacters="300"
+                    app:met_primaryColor="@color/colorFont"
+                    app:met_underlineColor="@color/colorFont" />
+            </LinearLayout>
+
+        </www.linwg.org.lib.LCardView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/yes_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:contentDescription="@string/theme_tag"
+        android:text="确定"
+        android:textColor="@color/colorStress"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

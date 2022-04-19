@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4D3EB7">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/title_head_bg"
+                app:layout_collapseMode="parallax" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                app:layout_collapseMode="pin" />
+
+            <com.hjq.bar.TitleBar
+                android:id="@+id/title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerCrop"
+                app:backButton="false"
+                app:barStyle="ripple"
+                app:layout_collapseMode="pin"
+                app:leftColor="@color/colorStress"
+                app:leftSize="18sp"
+                app:leftTitle="&#xe600;"
+                app:titleSize="18sp" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/prog_ress"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="8dp"
+                                android:contentDescription="@string/app_name" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100%"
+                                android:textColor="@color/colorFont"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:id="@+id/app_r_icon"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:contentDescription="@string/app_name" />
+
+                            <TextView
+                                android:id="@+id/app_r_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                tools:ignore="UselessParent">
+
+                                <www.linwg.org.lib.LCardView
+                                    android:id="@+id/app_fun_get_app_src"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    app:cardBackgroundColor="#ffffff"
+                                    app:cornerRadius="5dp"
+                                    app:shadowColor="#eaeaea"
+                                    app:shadowSize="10dp"
+                                    app:shadowStartAlpha="100">
+
+                                    <TextView
+                                        android:id="@+id/theme_t1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:text="提取资源"
+                                        android:textColor="@color/colorStress"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+                                </www.linwg.org.lib.LCardView>
+
+
+                                <www.linwg.org.lib.LCardView
+                                    android:id="@+id/app_fun_msg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    app:cardBackgroundColor="#ffffff"
+                                    app:cornerRadius="5dp"
+                                    app:shadowColor="#eaeaea"
+                                    app:shadowSize="10dp"
+                                    app:shadowStartAlpha="100">
+
+                                    <TextView
+                                        android:id="@+id/theme_t2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:text="更多信息"
+                                        android:textColor="@color/colorStress"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+                                </www.linwg.org.lib.LCardView>
+
+                            </LinearLayout>
+
+                            <!--<www.linwg.org.lib.LCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                app:cardBackgroundColor="#ffffff"
+                                app:cornerRadius="8dp"
+                                app:shadowColor="#eaeaea"
+                                app:shadowSize="10dp"
+                                app:shadowStartAlpha="100">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="选图提取"
+                                    android:textColor="@color/colorStress"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+                            </www.linwg.org.lib.LCardView>-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/res_pack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/res_pack_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:text="资源打包"
+                        android:textColor="@color/colorStress" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/share_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/share_app_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:text="分享APP"
+                        android:textColor="@color/colorStress" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/extract_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/extract_app_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:text="提取安装包"
+                        android:textColor="@color/colorStress" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/extract_app_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/extract_app_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:text="提取APP图标"
+                        android:textColor="@color/colorStress" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/open_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/open_app_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:text="打开APP"
+                        android:textColor="@color/colorStress" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/un_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/un_app_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:text="卸载APP"
+                        android:textColor="@color/colorStress" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="10dp"
+                        android:text="类别选择"
+                        android:textColor="@color/textColor"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/typeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <!--<www.linwg.org.lib.LCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="@color/colorStress"
+        app:cornerRadius="10dp"
+        app:shadowColor="@color/colorStress"
+        app:shadowSize="10dp"
+        app:shadowStartAlpha="100">
+        <TextView
+            android:text="选图提取"
+            android:textColor="#ffffff"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </www.linwg.org.lib.LCardView>-->
+
+    <!--   <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="35dp"
+           android:text="类型"
+           android:textColor="@color/colorFont"
+           android:textSize="20sp"
+           android:textStyle="bold" />
+
+       <www.linwg.org.lib.LCardView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="15dp"
+           app:cardBackgroundColor="#ffffff"
+           app:cornerRadius="8dp"
+           app:shadowColor="@color/colorWhiteShadow"
+           app:shadowSize="10dp"
+           app:shadowStartAlpha="100">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/app_fun_type_recycler"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="25dp" />
+
+       </www.linwg.org.lib.LCardView>
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="35dp"
+           android:text="大小"
+           android:textColor="@color/colorFont"
+           android:textSize="20sp"
+           android:textStyle="bold" />
+
+       <www.linwg.org.lib.LCardView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="15dp"
+           app:cardBackgroundColor="#ffffff"
+           app:cornerRadius="8dp"
+           app:shadowColor="@color/colorWhiteShadow"
+           app:shadowSize="10dp"
+           app:shadowStartAlpha="100">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="25dp" />
+
+       </www.linwg.org.lib.LCardView>
+
+-->
+

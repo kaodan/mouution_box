@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.srcbox.file.ui.login.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/topImg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@mipmap/title_head_bg"
+        app:layout_constraintBottom_toTopOf="@id/login_hint_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/login_hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you OK？"
+        android:textColor="@color/colorStress"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <www.linwg.org.lib.LCardView
+        android:id="@+id/login_nav"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_hint_text"
+        app:shadowColor="@color/colorWhiteShadow"
+        app:shadowSize="5dp"
+        app:shadowStartAlpha="80">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/log_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#22cccccc"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="登录"
+                        android:textColor="@color/colorStress"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reg_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注册"
+                        android:textColor="@color/colorGray" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--<androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:id="@+id/user_zh"
+                    android:layout_margin="15dp"
+                    android:background="@color/white"
+                    android:hint="账号"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />-->
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView
+                        android:id="@+id/user_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="15dp"
+                        android:background="@color/white"
+                        android:completionThreshold="1"
+                        android:hint="用户名"
+                        android:includeFontPadding="true"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <www.linwg.org.lib.LCardView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardBackgroundColor="#00000000"
+                        app:cornerRadius="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shadowSize="0dp">
+
+                        <ImageView
+                            android:id="@+id/user_qq_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/mountain" />
+                    </www.linwg.org.lib.LCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/user_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="15dp"
+                    android:background="@color/white"
+                    android:hint="密码"
+                    android:inputType="textPassword"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/commitContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+
+
+                        <www.linwg.org.lib.LCardView
+                            android:id="@+id/user_submit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="17sp"
+                            app:cardBackgroundColor="#f44336"
+                            app:cornerRadius="5dp"
+                            app:shadowSize="0dp">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:paddingStart="25dp"
+                                android:paddingEnd="25dp"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    android:id="@+id/userSubT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="进入(新用户自动注册)"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </www.linwg.org.lib.LCardView>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/forget_pass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:text="忘记密码"
+                        android:textColor="@color/colorStress" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </www.linwg.org.lib.LCardView>
+
+    <ImageView
+        android:id="@+id/qqLogin"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="100dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/qq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

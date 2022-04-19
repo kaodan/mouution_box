@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <www.linwg.org.lib.LCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#ffffff"
+        app:cornerRadius="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shadowColor="@color/colorWhiteShadow"
+        app:shadowSize="8dp"
+        app:shadowStartAlpha="100">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ext_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/mountain"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ext_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:text="名字"
+                android:textColor="@color/colorFont"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/ext_progress"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ext_img" />
+
+            <com.daimajia.numberprogressbar.NumberProgressBar
+                android:id="@+id/ext_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/user_desc"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/user_img"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ext_text"
+                app:progress_current="80"
+                app:progress_max="100"
+                app:progress_reached_bar_height="1.5dp"
+                app:progress_reached_color="@color/colorStress"
+                app:progress_text_color="#2196f3"
+                app:progress_text_visibility="visible"
+                app:progress_unreached_bar_height="0.75dp"
+                app:progress_unreached_color="#CCCCCC"
+                tools:ignore="NotSibling" />
+
+
+            <TextView
+                android:id="@+id/progress_stop_or_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="暂停"
+                android:visibility="gone"
+                android:textColor="@color/colorStress"
+                app:layout_constraintBottom_toTopOf="@id/progress_del_or_start"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/progress_del_or_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="删除"
+                android:textColor="@color/colorStress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_stop_or_start" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </www.linwg.org.lib.LCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

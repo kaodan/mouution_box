@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">山盒</string>
+    <string name="t1">首页</string>
+    <string name="t2">中心</string>
+    <string name="t3">右边</string>
+    <string name="t4">工具</string>
+    <string name="t5">屏幕资源采集</string>
+    <string name="t6">最近</string>
+    <string name="t7">我的图片</string>
+    <string name="t8">视频</string>
+    <string name="t9">音乐</string>
+    <string name="t11">数据</string>
+    <string name="t12">用户</string>
+    <string name="t13">充值会员</string>
+    <string name="t14">查看余额</string>
+    <string name="t15">其他</string>
+    <string name="t16">关于APP</string>
+    <string name="t17">设置</string>
+    <string name="cap_img_desc">请您授予该权限，否则无法抓取屏幕上的资源。</string>
+    <string name="float_t_cancel">&#xe607;</string>
+    <string name="theme_tag">theme_tag</string>
+    <string name="save">保存</string>
+</resources>

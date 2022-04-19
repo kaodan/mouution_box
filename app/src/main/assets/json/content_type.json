@@ -1,0 +1,9 @@
+{
+  "png": "image/png",
+  "jpeg": "image/jpeg",
+  "m1v": "video/x-mpeg",
+  "m3u": "audio/mpegurl",
+  "mp3": "audio/mp3",
+  "mp4": "video/mpeg4",
+  "mps": "video/x-mpeg"
+}
